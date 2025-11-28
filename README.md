@@ -1,29 +1,36 @@
 # AI Chatbot WordPress Plugin
 
-An AI-powered chatbot for WordPress that answers visitor questions based on your site content and an optional private knowledge base, using the DeepSeek chat API.
+An AI powered chatbot for WordPress that answers visitor questions based on your site content and an optional private knowledge base, using the DeepSeek chat API.
 
 ## Features
 
-- Short, focused answers powered by a DeepSeek chat model
-- Uses your WordPress posts as context and can show them as clickable buttons
-- Optional private knowledge base from uploaded `.txt` and `.md` files
-- Responsive widget that works on desktop, tablet, and mobile
-- Auto open on larger screens, floating chat button on mobile
-- Simple settings page for API key, welcome message, and fallback email
-- Basic GDPR aware handling of uploaded files with simple pattern based sanitization
+- Short, focused answers powered by a DeepSeek chat model  
+- Uses your WordPress posts as context and can show them as clickable buttons  
+- Optional private knowledge base from uploaded `.txt` and `.md` files  
+- Responsive widget that works on desktop, tablet and mobile  
+- Auto open on larger screens and a floating chat button on mobile  
+- Simple settings page for API key, welcome message and fallback email  
+- Basic GDPR aware handling of uploaded files with simple pattern based sanitization  
 
-> Note: This plugin does not ship with any API key. You must provide your own DeepSeek API key in the settings.
+> This plugin does not include any API key. You must provide your own DeepSeek API key in the settings.
 
-## Requirements
+---
 
-- WordPress 5.8+
-- PHP 7.4+
-- A DeepSeek API key with access to the chat endpoint
-- A configured WordPress privacy policy page
+## Files and folder structure
 
-## Installation
+Place the plugin files in a folder named for example `ai-chatbot-plugin` inside `wp-content/plugins`.
 
-1. Copy the plugin folder (for example `ai-chatbot-plugin`) into your WordPress installation under:
+Recommended structure:
 
-   ```text
-   /wp-content/plugins/
+```text
+ai-chatbot-plugin/
+  ai-chatbot-plugin.php        (main plugin file, contains PHP logic and frontend widget)
+  README.md                    (this documentation)
+
+  css/
+    ai-chatbot.css             (optional extra styles, currently not strictly required)
+    ai-chatbot-admin.css       (admin styles for the knowledge base page)
+
+  js/
+    ai-chatbot.js              (optional extra logic for the frontend widget)
+    ai-chatbot-admin.js        (JavaScript for knowledge base upload and list handling)
